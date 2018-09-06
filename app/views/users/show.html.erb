@@ -1,0 +1,20 @@
+user show
+
+<%= @user.email %>
+<%= @user.name %>
+
+<%= form_for @book do |f| %>
+
+<%= f.text_field :title %>
+<%= f.text_area :body %>
+
+<%= f.submit %>
+
+<% end %>
+
+
+<% @books.each do |book| %>
+<%= book.id %>/
+<%= book.title %>/
+<%= book.body %><br>
+<% end %>
